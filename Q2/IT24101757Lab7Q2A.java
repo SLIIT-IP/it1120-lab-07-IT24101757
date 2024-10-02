@@ -9,7 +9,7 @@ public class IT24101757Lab7Q2A
 		{
 			for(a=0; a<5; a++)
 			{
-				System.out.print("&" + " ");
+				System.out.print("$" + " ");
 			}
 			System.out.println();
 		}
