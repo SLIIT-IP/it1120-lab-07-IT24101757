@@ -8,7 +8,7 @@ public class IT24101757Lab7Q2B{
 			System.out.print(i + " "+"-"+" ");
 			for(a=0; a<i; a++)
 			{
-				System.out.print("&" + " ");
+				System.out.print("*" + " ");
 			}
 			System.out.println();
 		}
