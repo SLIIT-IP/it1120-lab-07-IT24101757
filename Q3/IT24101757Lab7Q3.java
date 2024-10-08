@@ -2,57 +2,50 @@ import java.util.Scanner;
 
 public class IT24101757Lab7Q3
 {
-	public static void main(String[] args){
-		
-		Scanner input = new Scanner(System.in);
-		
-		float TotBill;
-		char PayMode;
-		float Disc;
-		float DBill;
-		int c=0;		//Customer counter
-		int intpaymode;
-		
-		
-		while (c<5)
-		{
-			
-			System.out.println("Customer "+ ++c);
-			
-			System.out.print("Enter Total bill amount: ");
-			TotBill = input.nextFloat();
-			
-			System.out.print("Enter mode of payment (C for cash, o for other): ");
-			PayMode = input.next().charAt(0);
-			
-			intpaymode = PayMode;		//Get the ASCII Value
-			
-			if (intpaymode == 67 || intpaymode == 99){	// C = 67 / c = 99 (ASCII)
-				
-				Disc = (TotBill*5/100);
-				DBill = TotBill - Disc;
-				
-				System.out.println("Discount is : " + Disc);
-				System.out.println("Amount to be apid : " + DBill);
-				
-				
-			} 
-			else if (intpaymode == 79 || intpaymode == 111)
-			{		// O = 99 / o = 111 (ASCII)
-				
-				System.out.println("No Discount applicable");
-				System.out.println("Amount to be apid : " + TotBill);
-				
-			}
-			else
-			{
-				
-				System.out.println("Payment Mode is not valid");
-				
-			}
-			
-			System.out.println(" ");
-		}
-		
-	}
+         public static void main(String[] args)
+         {
+
+          Scanner input = new Scanner(System.in);
+          int numbers[] = new int[5];
+
+          int i, j = 0;
+          char modeOfPayment;
+          double discount, totalBill, totalAmount;
+
+           for (i=0; i < 5; i++)
+           {
+            System.out.println("Customer " + ++j);
+             
+            System.out.print("Enter total bill amount :");
+            totalBill = input.nextDouble();
+
+            System.out.print("Enter mode of payment (C for cash, O for other) :");
+            modeOfPayment = input.next().charAt(0);
+
+                if(modeOfPayment == 'C' || modeOfPayment == 'c')
+                  {
+                   discount = totalBill * 0.05;
+                   totalAmount = totalBill - discount;
+
+                  System.out.println("Discount is: " + discount);
+                  System.out.println("Amount to be paid: " + totalAmount);
+                   
+                   }
+
+               else if (modeOfPayment == 'O' || modeOfPayment == 'o')
+                  {
+                   System.out.println("No discount applicable");
+                   System.out.println("Amount to be paid: " + totalBill);
+                  }
+               else
+                  {
+                   System.out.println("Payment Mode is Not Valid");
+                  }
+
+          System.out.println(); 
+          }
+         }
 }
+
+
+
